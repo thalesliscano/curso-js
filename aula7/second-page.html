@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Olá seja bem vindo!!!</h1>
+  <h2>Você esta cadastrado: </h2>
+
+  <p id='pessoas-cadastrada'></p>
+
+  <script>
+    let nome = localStorage.getItem("nome");
+    let sobreNome = localStorage.getItem("sobreNome");
+    let peso = localStorage.getItem("peso");
+    let altura = localStorage.getItem("altura");
+
+    document.getElementById(
+      "pessoas-cadastrada"
+    ).innerText = `${nome} ${sobreNome}, ${peso} e ${altura}`;
+
+    console.log(`${nome} ${sobreNome}, ${peso} e ${altura}`)
+  </script>
+</body>
+
+</html>
