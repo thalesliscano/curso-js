@@ -76,6 +76,7 @@ function calculoDoTempo() {
 // };
 
 const startCrono = start.addEventListener("click", () => {
+  clearInterval(intervalo);
   calculoDoTempo();
   h1.forEach((el) => {
     el.style.color = "#00ff00";
