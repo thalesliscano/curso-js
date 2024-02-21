@@ -2,14 +2,13 @@
 
 const container = document.querySelector(".container");
 const cronometro = container.querySelector(".cronometro");
+const h1 = cronometro.querySelectorAll("h1");
 const time = cronometro.querySelectorAll(".time");
 
 const btns = container.querySelector(".controles");
 const start = btns.querySelector("#start");
 const stoped = btns.querySelector("#stop");
 const restart = btns.querySelector("#restart");
-
-const estiloCronometro = getComputedStyle(cronometro.querySelector(".time"));
 
 let arrayDate = [];
 time.forEach(function (el) {
@@ -78,11 +77,16 @@ function calculoDoTempo() {
 
 const startCrono = start.addEventListener("click", () => {
   calculoDoTempo();
+  h1.forEach((el) => {
+    el.style.color = "#00ff00";
+  });
 });
 
 const stopCrono = stoped.addEventListener("click", () => {
   clearInterval(intervalo);
-  console.log("pare");
+  h1.forEach((el) => {
+    el.style.color = "#ff0000";
+  });
 });
 
 const restartCrono = restart.addEventListener("click", () => {
