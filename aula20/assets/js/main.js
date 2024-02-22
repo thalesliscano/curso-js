@@ -41,6 +41,7 @@ function calculoDoTempo() {
       minutesElement = minutesElement % 60;
     }
 
+    //string.padStart(tamanho, [caractereDePreenchimento])
     hour.textContent = `${String(hoursElement).padStart(2, "0")}`;
     minute.textContent = ` ${String(minutesElement).padStart(2, "0")}`;
     second.textContent = `${String(secondsElement).padStart(2, "0")}`;
