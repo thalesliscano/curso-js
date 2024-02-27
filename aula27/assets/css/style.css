@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+p {
+  margin: 0;
+  /* text-align: center; */
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: "Open sans", sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container .container-descricao {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  justify-content: center;
+  column-gap: 50px;
+}
+.container #content {
+  text-align: center;
+}
+
+.titulo {
+  text-align: center;
+}
+.container .calculadora {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  background-color: gray;
+  height: 280px;
+}
+
+/* input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+} */
+
+.container .calculadora #entrada {
+  display: flex;
+  width: 320px;
+  height: 50px;
+  text-align: end;
+  font-weight: 600;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+  font-size: 20px;
+}
+.container .calculadora .buttons {
+  width: 320px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4px;
+  border-radius: 5px;
+}
+.container .calculadora .buttons .btn-calc {
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  color: rgb(76, 238, 135);
+  border: none;
+}
+.ativo {
+  background-color: rgb(76, 238, 135) !important;
+  color: rgb(255, 255, 255) !important;
+}
